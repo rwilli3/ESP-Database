@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="amarti54db?zeroDateTimeBehavior=convertToNullPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>exteriorsurfacedatabase.Employee</class>
+    <class>exteriorsurfacedatabase.Emp</class>
+    <class>exteriorsurfacedatabase.Works</class>
+    <class>exteriorsurfacedatabase.Customer</class>
+    <class>exteriorsurfacedatabase.Estimate</class>
+    <class>exteriorsurfacedatabase.Job</class>
+    <class>exteriorsurfacedatabase.Offers</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://triton.towson.edu:3360/amarti54db?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="amarti54"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="Cosc*rfd3"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="samplePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>exteriorsurfacedatabase.Customer</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+    </properties>
+  </persistence-unit>
+</persistence>
